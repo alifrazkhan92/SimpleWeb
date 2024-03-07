@@ -22,6 +22,11 @@ h1 {
 img {
     width: 20%;
     padding-bottom: 0px;
+    filter: grayscale(100%);
+}
+
+img:hover {
+    filter: grayscale(0%);
 }
 
 .painting {
