@@ -66,3 +66,7 @@ function returnInfo(){
         document.body.style.backgroundColor='grey';
     }
 }
+
+
+//A small Bank App
+
