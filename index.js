@@ -68,5 +68,28 @@ function returnInfo(){
 }
 
 
-//A small Bank App
+/*A small Bank App is in a next file.
+
+ for loop
+ var arrFruit = ['bannana', 'apple', 'orange','raspberry'];
+ for(i=0; i<arrfuite.length; i++){
+      alert(arrFruite[i]);
+}*/
+
+
+/* check the car_dealership file for an example
+while loops
+var count()
+while(count < 3){
+    alert('This is count' + count);
+}*/
+
+/*Functions- For example see above */
+
+/* Arrow function
+    var myFunction=(x,y,z) => x+y-z
+    var newValue = myFunction(10,5,14)
+    newValue
+*/
+
 
