@@ -91,5 +91,3 @@ while(count < 3){
     var newValue = myFunction(10,5,14)
     newValue
 */
-
-

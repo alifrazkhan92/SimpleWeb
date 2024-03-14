@@ -1,0 +1,21 @@
+.error{
+    padding: 10px;
+    color: crimson;
+    border: 1px dotted crimson;
+    font-size: 30px;
+}
+
+
+.success{
+    padding: 10px;
+    color: limegreen;
+    border: 1px dotted limegreen;
+    font-size: 30px;
+}
+
+.title{
+    padding: 10px;
+    color: blueviolet;
+    border: 3px dotted brown;
+    text-align: center;
+}
