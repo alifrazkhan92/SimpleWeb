@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper{
+            width: 1000px;
+            display: Grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            border:1px solid black;
+            padding: 15px;
+            margin: auto;
+        }
+        .inners{
+            height: 250px;
+            background-color: rgb(247, 244, 230);
+            text-align: center;
+            border: 5px solid green;
+        }
+
+        .thisDiv{
+            transition: 0.8s;
+            transform-origin: center;
+        }
+
+        .thisDiv:hover{
+            /*transform: translate(50px); */
+            /*transform: scale(1.1);*/
+            transform: scale(1.2) rotate(360deg) skew(10deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inners thisDiv">1</div>
+        <div class="inners thisDiv">2</div>
+        <div class="inners thisDiv">3</div>
+        <div class="inners thisDiv">4</div>
+        <div class="inners thisDiv">5</div>
+        <div class="inners thisDiv">6</div>
+        <div class="inners thisDiv">7</div>
+        <div class="inners thisDiv">8</div>
+        <div class="rateteDiv">
+            <img src="https://www.myntra.com/dresses/antheaa/antheaa-teal-floral-chiffon-midi-dress/18110676/buy" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>
