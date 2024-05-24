@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Test</title>
+</head>
+<body>
+
+    <ul>
+        <li class="list">1</li>
+        <li class="list">2</li>
+        <li class="list">3</li>
+        <li class="list">4</li>
+        <li class="list">5</li>
+        <li class="list">6</li>
+    </ul>
+    <div id="main">
+        <div class="user">User1</div>
+    </div>
+
+    <div id="main">
+        <div class="user">User2</div>
+    </div>
+
+    <script>
+        const p = document.getElementById('main');
+        console.log(p);
+
+        const q = document.getElementsByClassName('list');
+        console.log(q);
+
+        const r = document.getElementsByTagName('div');
+        console.log(r);
+
+        const s = document.querySelector('ul li:nth-child(4)');
+        console.log(s);
+
+        const x = document.querySelectorAll('li');
+        console.log(x);
+
+        for(let i = 0; i < q.length; i++){
+            console.log(q[i])
+        }
+
+        const ul = document.querySelector('ul');
+        console.log(ul.innerHTML)
+        console.log(ul.innerText)
+        m = ul.innerText = 'Hello';
+        console.log(m)
+    </script>
+    
+    
+</body>
+
+</html>
+
+<script>
+
+// 1) document.getElementById('id');
+// 2) document.getElementByClassName('classname');
+// 3) document.getElementByTagName('tagname');
+// 4) document.querySelector('css selector');
+// 5) document.querySelectorAll('css selector') ;
+
+// DOM Method
+// innerText
+// innerHTML
+
+</script>
