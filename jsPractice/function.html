@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <button onclick="x()">Anonymous Function</button>
+    <button onclick="clickFunction()">Named Function</button>
+    <button onclick="p()">Arrow Function</button>
+    <button onclick="b(this)">This as Parameter</button>
+    <script>
+
+        //Annonymouse Function
+        console.log('First');
+
+        const x = function(){
+            console.log('Anonymous Function');
+        };
+
+
+        //Named Function
+        function clickFunction(){
+            console.log('Name Function')
+        };
+
+        //Arrow Function
+        const p = () =>{
+            console.log('Arrow Function')
+        };
+
+        function a(x, y){
+            console.log(x+y);
+        };
+
+        function b(){
+            console.log('this as parameter');
+        };
+
+        a(50, 40);
+
+        function User(x, y){
+            this.name = x,
+            this.lastname = y
+        };
+
+        let data = new User('John', 'Wick');
+        console.log(data);
+
+    </script>
+</body>
+</html>
