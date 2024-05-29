@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Text and Inner HTML</title>
+</head>
+<body>
+   
+    //.main*2>ul>li*6{$ Hello}
+    <div class="main">
+        <ul>
+            <li>1 Hello</li>
+            <li>2 Hello</li>
+            <li>3 Hello</li>
+            <li>4 Hello</li>
+            <li>5 Hello</li>
+            <li>6 Hello</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing 
+            elit. Veritatis omnis fugit maiores placeat nam 
+            necessitatibus quae. Asperiores commodi quae 
+            reprehenderit totam animi, sequi eos doloribus, 
+            tempora nostrum, quasi laborum natus!</p>
+    </div>
+    <div class="main">
+        <ul>
+            <li>1 Hello</li>
+            <li>2 Hello</li>
+            <li>3 Hello</li>
+            <li>4 Hello</li>
+            <li>5 Hello</li>
+            <li>6 Hello</li>
+        </ul>
+    </div>
+
+
+    //#container*2>.user
+    <div id="container">
+        <div class="user">User1</div>
+    </div>
+    <div id="container">
+        <div class="user">User2</div>
+    </div>
+
+
+    <script>
+
+            const main = document.getElementsByClassName('main');
+            console.log(main[0].innerText);
+
+            const para = document.querySelector('.main p');
+            console.log(para);
+            console.log(para.innerText);
+
+    </script>
+
+</body>
+</html>
