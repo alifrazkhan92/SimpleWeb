@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach</title>
+</head>
+<body>
+    <script>
+
+        const arr = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+
+        //forEach return nothing, we need callback function
+        arr.forEach((v)=>{
+            console.log(v);
+        });
+
+        //map returns array
+        const y = arr.map((v, i)=> v = v**2);
+        console.log(y);
+
+        //filter returns single value
+        const z = arr.filter((v)=> v > 75);
+        console.log(z);
+        
+        //findindex find an index from an array
+        const a = arr.findIndex((v)=> v==50);
+        console.log(a);
+
+    </script>
+</body>
+</html>
