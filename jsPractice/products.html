@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: olive;
+        }
+        .container{
+           padding: 10px;
+        }
+        .container>h1{
+            text-align: center;
+            padding: 10px;
+            color: white
+            text-decoration: underline;
+        }
+        .product-container{
+            display: grid;
+            grid-template-columns: 2fr 6fr;
+        }
+        /*.product-container div{
+            border: 1px solid black;
+        }*/
+        .cards{
+            display: grid;
+            padding: 10px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .card{
+            background-color: whitesmoke;
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 10px;
+        }
+        .card>h2{
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .card p{
+            font-size: 17px;
+            font-weight: 500;
+            padding: 8px 0;
+        }
+        .card div{
+            font-size: 17px;
+            font-weight: 500;
+        }
+        .card div span:nth-child(2){
+            color: grey;
+            text-decoration: line-through;
+        }
+        .card div span:nth-child(3){
+            font-size: 18px;
+        }
+        .card div:last-child{
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .card div:last-child button{
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Products</h1>
+
+        <div class="product-container">
+            <div class="cotegories"></div>
+            <div class="cards">
+                <!-- <div class="card">
+                    <figure class="tumbnail">
+                        <img src="https://cdn.dummyjson.com/products/images/womens-watches/Watch%20Gold%20for%20Women/thumbnail.png" alt="">
+                    </figure>
+                    <h2>Watch Gold for Women</h2>
+                    <p>The Gold Women's Watch is a stunning accessory that combines luxury and style. Featuring a gold-plated case and a chic design, it adds a touch of glamour to any outfit.</p>
+                    <div>
+                        <span>Price: $</span> <span>1000</span> <span>920</span>
+                    </div>
+                    <div>
+                        <button>Details</button>
+                        <button>Add to cart</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <script>
+        const cardContainer = document.querySelector('.cards');
+        const url = 'https://dummyjson.com/products?limit=194'
+
+        const showData = (products)=>{
+            let allData = ''; 
+            products.forEach((product)=>{
+                allData += `<div class="card">
+                    <figure class="tumbnail">
+                        <img src="${product.thumbnail}" alt="">
+                    </figure>
+                    <h2>${product.title}</h2>
+                    <p>${product.description}</p>
+                    <div>
+                        <span>Price: $</span> <span>1000</span> <span>${price}</span>
+                    </div>
+                    <div>
+                        <button>Details</button>
+                        <button>Add to cart</button>
+                    </div>
+                </div>`;
+            });
+            cardContainer.innerHTML = allData;
+        }
+
+        const fetchData = async()=>{
+            const response = await fetch(url);
+        
+            if(response.status === 200){
+                const actualData = await response.json();
+
+                showData(actualData.products);
+            }else{
+                alert('Something is wrong.')
+            }
+        };
+
+        fetchData();
+
+    </script>
+</body>
+</html>

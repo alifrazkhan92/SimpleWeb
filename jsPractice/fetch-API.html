@@ -1,0 +1,44 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+    <script>
+
+        const fetchApi = async()=>{
+           const response = await fetch('https://dummyjson.com/recipes');
+
+           if(response.status !==200 || !response.ok){
+            alert('Something is wrong.');
+            return
+           }
+
+           const data = await response.json();
+
+           console.log(data);
+        };
+
+        fetchApi()
+
+        const abc = async()=>{
+            const responses = await fetch('https://dummyjson.com/recipes');
+
+            if(responses.status !==200 || !responses.ok){
+                alert('Something is wrong.');
+                return
+            }
+
+            const dataa = await responses.json();
+            
+            console.log(dataa)
+        }
+
+        abc()
+This is a test video for my YouTube Channel. Everyday I am doing one video for channel. This is bilingual channel and offer a variety of video on the different topics.
+        
+    </script>
+</body>
+</html>
