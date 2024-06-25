@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(213, 217, 228);
+        }
+
+        .container{
+            padding: 10px;
+        }
+        .container > h1 {
+            text-align: center;
+            padding: 10px;
+            color: white;
+            text-decoration: underline;
+        }
+        .product-container{
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+        }
+        
+        .cards{
+            display: grid;
+            padding: 10px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .img{
+            width: 100%;
+            height: 100%;
+        }
+        .card{
+            background-color: whitesmoke;
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 10px;
+        }
+        .card h2{
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .card p{
+            font-size: 17px;
+            font-weight: 500;
+            padding: 8px 0;
+        }
+        .card div{
+            font-size: 17px;
+
+        }
+        .card div span:nth-child(2){
+            color: grey;
+            text-decoration: line-through;
+        }
+        .card div span:nth-child(3){
+            font-size: 18px;
+        }
+        .card div:last-child{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .card div:last-child button{
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Products</h1>
+        <div class="product-container">
+            <div class="categories">
+                <h2>Category</h2>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <figure class="thumbnail">
+                        <img src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png" alt="">
+                    </figure>
+                    <h2>Essence Mascara Lash Princess</h2>
+                    <p> The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.</p>
+                    <div>
+                        <span>Price: $</span><span>1000</span><span>920</span>
+                    </div>
+                    <div>
+                        <button>Detail</button>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        const url = "https://dummyjson.com/products?limit=194";
+        const fetchData = async()=>{
+            const response = await fetch(url);
+            if(response.status === 200){
+                const actualData = await response.json();
+                showData(actualData.products);
+            }else{
+                console.log('Something went wrong')
+            }
+        };
+        fetchData();
+
+        const showData = (products)=>{
+            console.log(products);
+        }
+    </script>
+</body>
+</html>
